@@ -1286,6 +1286,11 @@ export class AnalyticsController {
       ip,
     )
 
+    if (logDTO.pid === 'N2kuL4i8qmOQ') {
+      console.log('IP:', ip)
+      console.log('X-Client-IP-Address:', headers['x-client-ip-address'])
+    }
+
     await this.analyticsService.processInteractionSD(psid, logDTO.pid)
 
     if (!unique && logDTO.unique) {

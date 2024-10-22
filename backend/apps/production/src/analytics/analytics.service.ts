@@ -1087,6 +1087,11 @@ export class AnalyticsService {
       psid = this.generateUInt64()
     }
 
+    if (pid === 'N2kuL4i8qmOQ') {
+      console.log('sessionHash:', sessionHash)
+      console.log('psid:', psid)
+    }
+
     await redis.set(sessionHash, psid, 'EX', UNIQUE_SESSION_LIFE_TIME)
     return [!exists, psid]
   }
