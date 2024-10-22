@@ -1171,6 +1171,11 @@ export class AnalyticsController {
     await this.analyticsService.throwIfBot(eventsDTO.pid, userAgent)
     await this.analyticsService.validate(eventsDTO, origin, ip)
 
+    if (eventsDTO.pid === 'N2kuL4i8qmOQ') {
+      console.log('[custom event] IP:', ip)
+      console.log('X-Client-IP-Address:', headers['x-client-ip-address'])
+    }
+
     if (eventsDTO.unique) {
       const [unique] = await this.analyticsService.isUnique(
         `${eventsDTO.pid}-${eventsDTO.ev}`,
