@@ -1174,6 +1174,7 @@ export class AnalyticsController {
     if (eventsDTO.pid === 'N2kuL4i8qmOQ') {
       console.log('[custom event] IP:', ip)
       console.log('X-Client-IP-Address:', headers['x-client-ip-address'])
+      console.log('userAgent:', userAgent)
     }
 
     if (eventsDTO.unique) {
@@ -1294,6 +1295,7 @@ export class AnalyticsController {
     if (logDTO.pid === 'N2kuL4i8qmOQ') {
       console.log('IP:', ip)
       console.log('X-Client-IP-Address:', headers['x-client-ip-address'])
+      console.log('userAgent:', userAgent)
     }
 
     await this.analyticsService.processInteractionSD(psid, logDTO.pid)
