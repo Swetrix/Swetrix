@@ -104,6 +104,7 @@ export class CaptchaService {
     timestamp: number,
     ip: string,
   ) {
+    console.log('logCaptchaPass', pid, userAgent, timestamp, ip)
     const ua = UAParser(userAgent)
     const dv = ua.device.type || 'desktop'
     const br = ua.browser.name
@@ -111,6 +112,8 @@ export class CaptchaService {
 
     const { country } = getGeoDetails(ip)
     const transformed = captchaTransformer(pid, dv, br, os, country, timestamp)
+
+    console.log('transformed', transformed)
 
     try {
       await clickhouse.insert({
