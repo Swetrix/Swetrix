@@ -59,6 +59,7 @@
     "faqs": "FAQs",
     "accountSettings": "Account settings",
     "liveDemo": "Live demo",
+    "marketplace": "Marketplace",
     "dashboard": "Dashboard",
     "logout": "Logout",
     "save": "Save",
@@ -383,6 +384,9 @@
       "api": "Developer API",
       "2fa": "Two-factor authentication"
     }
+  },
+  "marketplace": {
+    "slogan": "Enhance your <span>Dashboard Experience</span> with Swetrix!"
   },
   "referral": {
     "desc": "Swetrix is an ethical, open source and completely cookie-less alternative to Google Analytics. It allows you to understand your users' behaviour, monitor your website performance, track your marketing campaigns and much more. All without invading your users' privacy!",
